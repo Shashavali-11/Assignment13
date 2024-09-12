@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox CSS</title>
+    <style>
+      body {
+        /* background-color: black; */
+        padding: 100px;
+      }
+      /* Heading of Main Box */
+      h1{
+        cursor: pointer;
+        background-image: radial-gradient(black,white);
+      }
+
+      /* Main box or Parent box */
+      .parent {
+        display: flex;
+        /* responsive ness   */
+        flex-wrap: wrap;
+        border: 2px solid;
+        height: 60vh;
+        background-image: radial-gradient(black, green,orangered, white, indigo);
+        justify-content: center;
+        padding: 40px;
+        justify-content: space-around;
+      }
+      /* Images boxes sizes */
+      .cd {
+        border: 2px solid;
+        height: 570px;
+        width: 250px;
+      }
+      /* 1st box background color */
+      .c1{
+        background-color: orangered;
+      }
+      /* 2nd box background color */
+      .c2{
+        background-color:crimson;
+      }
+      /* 3rd box background color */
+      .c3{
+        background-color: green;
+      }
+
+      /* Tooltip for Image Titles*/
+      .tooltip{
+        color: white;
+        text-shadow: 2px 2px 4px pink;
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      /* Tooltip dimensions with text color */
+      .tooltip .tooltiptext{
+        visibility: hidden;
+        width: 150px;
+        background-color: rgba(135, 128, 183, 0.37);
+        color: blue ;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position of the tooltip */
+        position: absolute;
+        z-index: 1;
+        left: 70%;
+      }
+      /* Hover of a tooltip and tooltiptext */
+      .tooltip:hover .tooltiptext{
+        visibility: visible;
+      }
+      /* Image dimensions in all boxes */
+      img {
+        height: 200px;
+        width: 200px;
+        margin: 12px;
+        border-radius: 200px;
+      }
+      /* History of Places (text) */
+      p {
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color:whitesmoke;"><center>FLEXBOX CSS</center></h1>
+    <div class="parent">
+
+        <!-- 1st Box Image with History -->
+      <div class="cd c1">
+            <div class="tooltip">Effiel Tower
+                <span class="tooltiptext">Eiffel Tower &#128508;</span>
+
+            </div>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/375px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+                alt="eiffel"
+            />
+            <p>
+                The Eiffel Tower was initially built to serve as the entrance gateway
+                to the International Exposition of 1889 as well as a testament to
+                French industrial ingenuity. It has since come to represent the
+                distinct character of the city of Paris. The tower has three levels
+                for visitors, with restaurants on the first and second levels. The top
+                level's upper platform is 276 m (906 ft) above the ground – the
+                highest observation deck accessible to the public in the European
+                Union.
+            </p>
+      </div>
+
+      <!-- 2nd Box Image with History -->
+      <div class="cd c2">
+        <div class="tooltip">Taj Mahal
+            <span class="tooltiptext">Taj Mahal</span>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2024/02/23/06/37/ai-generated-8591418_640.png" alt="TajMahal">
+        <p>
+            The Taj Mahal, an iconic symbol of love, was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal. Construction began in 1632 and took over 20 years to complete, employing thousands of artisans from across the empire. The mausoleum's stunning white marble, intricate carvings, and inlaid gemstones reflect a blend of Persian, Islamic, and Indian architectural styles.
+        </p>
+      </div>
+
+
+      <!-- 3rd Box Image with History -->
+      <div class="cd c3">
+        <div class="tooltip"> Golkonda
+            <span class="tooltiptext"> Golkonda Fort   </span>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKAtjFaqlsk91u0uX1SQlcrTcFpKQ5JWaDg&s" alt="Golkonda">
+        <p>
+            century and later expanded by the Qutb Shahi rulers in the 16th century. It became the capital of the Golconda Sultanate, known for its wealth, particularly in diamonds. The fort's impressive architecture includes massive walls, gateways, and a sophisticated acoustic system.Golconda is famous for being the origin of some of the world's most renowned diamonds, including the Koh-i-Noor. 
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
